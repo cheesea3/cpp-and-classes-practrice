@@ -1,12 +1,13 @@
+
+
+
 //main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 #include <iostream>
 #include "Counterstrike.h"
-
+#include <sstream>
+#include <string>
 using namespace std;
-
-
-
 
 int main(void)
 {
@@ -21,9 +22,16 @@ int main(void)
 	// Create character object with stack memory
 	Counterstrike daiyaan = Counterstrike("Daiyaan", "Simpson", "Student"); //create an instance of Daiyaan Simpson through heap memory
 
-	cout << bart.getAge();
-	cout << homer->getAge();
-	cout << daiyaan.getAge();
+	//give daiyaan simpson ceo occupation hehe
+	daiyaan.changeJob("CEO");
+	cout << bart.getLname() << "\n";
+	cout << homer->getFname() << "\n";
+	//get default age from daiyaan through constructor :)
+	cout << daiyaan.getAge() << "\n";
+	//im about to turn 22 watch this
+	daiyaan.incrementAge(1);
+	cout << daiyaan.getAge() << "\n";
+	cout << daiyaan.getOccupation() << "\n";
 	delete homer;				// deallocate storage
 }
 
